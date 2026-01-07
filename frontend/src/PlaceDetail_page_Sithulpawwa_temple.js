@@ -89,13 +89,13 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                     EXPLORE<span className="text-orange-400">SOUTH</span>
                 </div>
                 <div className="hidden md:flex space-x-8 font-bold text-lg text-white tracking-wide">
-                    <Link to="/" className="hover:text-orange-400 transition"> Home </Link>
-                    <Link to="/About_page" className="hover:text-orange-400 transition"> About </Link>
-                    <Link to="/Destinations_page" className="text-orange-400 transition cursor-pointer">Destinations</Link>
-                    <Link to="/Hotels_page" className="hover:text-orange-400 transition"> Hotels </Link>
-                    <a href="#" className="hover:text-orange-400 transition">Restaurants</a>
-                    <Link to="/Transport_page" className="hover:text-orange-400 transition"> Transport </Link>
-                    <Link to="/Contact_page" className="hover:text-orange-400 transition"> Contact </Link>
+                    <Link to="/" className="hover:text-orange-400 transition"> {t('home')} </Link>
+                    <Link to="/About_page" className="hover:text-orange-400 transition"> {t('about')} </Link>
+                    <Link to="/Destinations_page" className="text-orange-400 transition cursor-pointer">{t('destinations')}</Link>
+                    <Link to="/Hotels_page" className="hover:text-orange-400 transition"> {t('hotels')} </Link>
+                    <a href="#" className="hover:text-orange-400 transition">{t('restaurants')}</a>
+                    <Link to="/Transport_page" className="hover:text-orange-400 transition"> {t('transport')} </Link>
+                    <Link to="/Contact_page" className="hover:text-orange-400 transition"> {t('contact')} </Link>
                 </div>
 
                 <div className="flex items-center space-x-4">
@@ -127,9 +127,9 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                         )}
                     </div>
 
-                    <Link to="/Login_page" className="text-sm font-semibold text-white hover:text-orange-400 transition">Login</Link>
+                    <Link to="/Login_page" className="text-sm font-semibold text-white hover:text-orange-400 transition">{t('login')}</Link>
                     <Link to="/Login_page" className="bg-white text-blue-900 px-5 py-2 rounded-full text-sm font-bold hover:bg-orange-500 hover:text-white transition">
-                        Register
+                        {t('register')}
                     </Link>
                 </div>
 
@@ -142,7 +142,7 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
             {/* --- Action Bar --- */}
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                 <Link to="/Destinations_page" className="flex items-center text-slate-600 hover:text-blue-600 font-medium">
-                    <ChevronLeft size={20} className="mr-1" /> Back to Search
+                    <ChevronLeft size={20} className="mr-1" /> {t('place_back_search')}
                 </Link>
                 <div className="flex gap-4">
                     <button className="p-2 hover:bg-slate-100 rounded-full"><Share2 size={20} /></button>
@@ -157,42 +157,42 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                 <div className="lg:col-span-2">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                         <div className="flex items-center text-orange-600 font-bold text-sm tracking-widest mb-2">
-                            <Star size={16} fill="currentColor" className="mr-1" /> ANCIENT MONASTERY
+                            <Star size={16} fill="currentColor" className="mr-1" /> {t('sithulpawwa_badge')}
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-black mb-6 text-slate-900">Sithulpawwa Rock Temple</h1>
+                        <h1 className="text-4xl md:text-5xl font-black mb-6 text-slate-900">{t('sithulpawwa_title')}</h1>
 
                         <div className="flex flex-wrap gap-6 mb-10 text-slate-600">
-                            <div className="flex items-center"><MapPin size={18} className="mr-2 text-blue-600" /> Hambantota District, Sri Lanka</div>
-                            <div className="flex items-center"><Star size={18} className="mr-2 text-orange-500" /> 4.7/5 (Ancient Buddhist Site)</div>
+                            <div className="flex items-center"><MapPin size={18} className="mr-2 text-blue-600" /> {t('sithulpawwa_location')}</div>
+                            <div className="flex items-center"><Star size={18} className="mr-2 text-orange-500" /> {t('sithulpawwa_rating')}</div>
                         </div>
 
                         <hr className="border-slate-100 mb-8" />
 
                         {/* Overview Section */}
                         <div className="mb-12">
-                            <h3 className="text-2xl font-bold mb-4">Overview</h3>
+                            <h3 className="text-2xl font-bold mb-4">{t('overviewTitle')}</h3>
                             <p className="text-slate-600 leading-relaxed text-lg">
-                                An ancient Buddhist monastery dating back to the 2nd century B.C., set atop a rocky hill with stupas, caves, early Brahmi inscriptions, and serene panoramic views. It was historically a center for Buddhist education and meditation. This historic monastery deep in Hambantota features cave temples and rock paintings reflecting early Buddhist culture.
+                                {t('sithulpawwa_overview')}
                             </p>
                         </div>
 
                         {/* Info Cards */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                            <InfoCard icon={<Calendar className="text-blue-600" />} title="Best Time" detail="7:00 - 10:00 AM (Nov-Apr)" />
-                            <InfoCard icon={<Clock className="text-orange-600" />} title="Duration" detail="2-3 Hours" />
-                            <InfoCard icon={<Ticket className="text-green-600" />} title="Entry Fee" detail="Donation-based" />
+                            <InfoCard icon={<Calendar className="text-blue-600" />} title={t('bestTime')} detail={t('sithulpawwa_best_time')} />
+                            <InfoCard icon={<Clock className="text-orange-600" />} title={t('place_duration_label')} detail={t('sithulpawwa_duration')} />
+                            <InfoCard icon={<Ticket className="text-green-600" />} title={t('entryFee')} detail={t('sithulpawwa_entry')} />
                         </div>
 
                         {/* Activities Section */}
                         <div className="mb-12">
                             <h3 className="text-2xl font-bold mb-6 flex items-center">
-                                <Flame className="mr-2 text-orange-500" /> Fun Activities
+                                <Flame className="mr-2 text-orange-500" /> {t('funActivities')}
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <ActivityItem title="Cultural Tours" desc="Explore ancient ruins and meditation caves with early Buddhist inscriptions" />
-                                <ActivityItem title="Photography" desc="Capture panoramic views over the dry zone landscape" />
-                                <ActivityItem title="Hiking" desc="Moderate climb up rock steps to reach the temple complex" />
-                                <ActivityItem title="Meditation" desc="Experience tranquility in historic meditation caves" />
+                                <ActivityItem title={t('sithulpawwa_cultural_tours')} desc={t('sithulpawwa_cultural_desc')} />
+                                <ActivityItem title={t('sithulpawwa_photography')} desc={t('sithulpawwa_photo_desc')} />
+                                <ActivityItem title={t('sithulpawwa_hiking')} desc={t('sithulpawwa_hiking_desc')} />
+                                <ActivityItem title={t('sithulpawwa_meditation')} desc={t('sithulpawwa_meditation_desc')} />
                             </div>
                         </div>
                     </motion.div>
@@ -201,25 +201,25 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                 {/* Right Column: Booking/Sticky Sidebar */}
                 <div className="lg:col-span-1">
                     <div className="sticky top-28 bg-white border border-slate-200 p-8 rounded-3xl shadow-xl shadow-slate-200/50">
-                        <h4 className="text-xl font-bold mb-4">Plan Your Visit</h4>
+                        <h4 className="text-xl font-bold mb-4">{t('place_plan_visit')}</h4>
                         <div className="space-y-4 mb-6">
                             <div className="flex justify-between text-sm">
-                                <span className="text-slate-500">From Hambantota</span>
-                                <span className="font-bold">~30 min</span>
+                                <span className="text-slate-500">{t('place_from')} {t('hambantota')}</span>
+                                <span className="font-bold">{t('sithulpawwa_from_hambantota')}</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                                <span className="text-slate-500">Duration</span>
-                                <span className="font-bold">2-3 Hours</span>
+                                <span className="text-slate-500">{t('place_duration_label')}</span>
+                                <span className="font-bold">{t('sithulpawwa_duration')}</span>
                             </div>
                         </div>
                         <button
                             onClick={handleGetDirections}
                             className="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
                         >
-                            Get Directions
+                            {t('getDirections')}
                         </button>
                         <p className="text-center text-xs text-slate-400 mt-4">
-                            Local guides available on site
+                            {t('sithulpawwa_guides')}
                         </p>
                     </div>
                 </div>
@@ -228,7 +228,7 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
             {/* --- Adobe Inspired Gallery Section --- */}
             <section className="max-w-7xl mx-auto px-6 mt-20">
                 <h3 className="text-2xl font-bold mb-8 flex items-center">
-                    <Camera className="mr-2 text-blue-600" /> Photo Gallery
+                    <Camera className="mr-2 text-blue-600" /> {t('photoGallery')}
                 </h3>
                 <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
                     {galleryImages.map((src, idx) => (
@@ -248,15 +248,15 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                 <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                         <div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-2">Getting There</h3>
-                            <p className="text-slate-500">Find directions to Sithulpawwa Rock Temple</p>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">{t('place_getting_there')}</h3>
+                            <p className="text-slate-500">{t('place_directions_to')} {t('sithulpawwa_title')}</p>
                         </div>
                         <button
                             onClick={handleUseMyLocation}
                             className="mt-4 md:mt-0 flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200"
                         >
                             <MapPin size={18} className="mr-2" />
-                            Use My Location
+                            {t('useMyLocation')}
                         </button>
                     </div>
 
@@ -278,9 +278,9 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
             {/* --- Transport Options Section --- */}
             <section className="max-w-7xl mx-auto px-6 mb-20">
                 <div className="flex items-center mb-8">
-                    <h3 className="text-3xl font-bold text-slate-900 mr-4">Transport Options</h3>
+                    <h3 className="text-3xl font-bold text-slate-900 mr-4">{t('transportOptionsTitle')}</h3>
                     <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">
-                        Updated Daily
+                        {t('updatedDaily')}
                     </span>
                 </div>
 
@@ -291,7 +291,7 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <span className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 text-blue-600">
                                 <Bus size={20} />
                             </span>
-                            Public Transport
+                            {t('publicTransport')}
                         </h4>
 
                         {/* Bus */}
@@ -310,7 +310,7 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <span className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-3 text-orange-600">
                                 <Car size={20} />
                             </span>
-                            Private Transport
+                            {t('privateTransport')}
                         </h4>
 
                         {/* Private Transfer */}
@@ -333,8 +333,8 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
             {/* --- Nearby Amenities Section --- */}
             <section className="max-w-7xl mx-auto px-6 mt-20 mb-20">
                 <div className="text-center mb-12">
-                    <h3 className="text-3xl font-bold text-slate-900 mb-3">Explore Nearby</h3>
-                    <p className="text-slate-500 text-lg">Discover essential amenities around Sithulpawwa</p>
+                    <h3 className="text-3xl font-bold text-slate-900 mb-3">{t('place_explore_nearby')}</h3>
+                    <p className="text-slate-500 text-lg">{t('place_discover_amenities')} {t('sithulpawwa_title')}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -350,8 +350,8 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition">
                                 <Hotel size={32} className="text-white" />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Nearby Hotels</h4>
-                            <p className="text-blue-100 text-sm">Find comfortable stays</p>
+                            <h4 className="text-xl font-bold mb-2">{t('place_nearby_hotels')}</h4>
+                            <p className="text-blue-100 text-sm">{t('place_find_stays')}</p>
                         </div>
                     </motion.button>
 
@@ -367,8 +367,8 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition">
                                 <Utensils size={32} className="text-white" />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Nearby Restaurants</h4>
-                            <p className="text-orange-100 text-sm">Explore local cuisine</p>
+                            <h4 className="text-xl font-bold mb-2">{t('place_nearby_restaurants')}</h4>
+                            <p className="text-orange-100 text-sm">{t('place_explore_cuisine')}</p>
                         </div>
                     </motion.button>
 
@@ -384,8 +384,8 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition">
                                 <Coffee size={32} className="text-white" />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Nearby Cafes</h4>
-                            <p className="text-amber-100 text-sm">Relax with coffee</p>
+                            <h4 className="text-xl font-bold mb-2">{t('place_nearby_cafes')}</h4>
+                            <p className="text-amber-100 text-sm">{t('place_relax_coffee')}</p>
                         </div>
                     </motion.button>
 
@@ -401,8 +401,8 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition">
                                 <Wine size={32} className="text-white" />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Nearby Bars</h4>
-                            <p className="text-purple-100 text-sm">Unwind & socialize</p>
+                            <h4 className="text-xl font-bold mb-2">{t('place_nearby_bars')}</h4>
+                            <p className="text-purple-100 text-sm">{t('place_unwind')}</p>
                         </div>
                     </motion.button>
                 </div>
@@ -437,10 +437,10 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
 
                                 <div className="text-left">
                                     <div className="text-lg font-black tracking-tight group-hover:text-blue-300 transition-colors">
-                                        Check Our Website
+                                        {t('place_check_website')}
                                     </div>
                                     <div className="text-xs text-slate-300 font-medium">
-                                        Hotels • Restaurants • Cafes • Bars
+                                        {t('place_amenities_list')}
                                     </div>
                                 </div>
 
@@ -460,23 +460,23 @@ const PlaceDetailPageSithulpawwa = ({ lang, setLang }) => {
             {/* --- Footer --- */}
             <footer className="bg-slate-900 py-24 px-6 text-white text-center rounded-t-[5rem] mt-auto">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-5xl font-bold mb-8 text-orange-400">Stay Connected</h2>
+                    <h2 className="text-5xl font-bold mb-8 text-orange-400">{t('place_stay_connected')}</h2>
                     <p className="text-xl text-slate-300 mb-12 leading-relaxed">
-                        Subscribe to discover more hidden gems and ancient wonders of Sri Lanka
+                        {t('place_subscribe_desc')}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto bg-white/10 p-2 rounded-3xl backdrop-blur-lg">
-                        <input type="email" placeholder="Enter your email" className="flex-1 bg-transparent px-6 py-4 outline-none font-bold placeholder:text-slate-500" />
+                        <input type="email" placeholder={t('place_enter_email')} className="flex-1 bg-transparent px-6 py-4 outline-none font-bold placeholder:text-slate-500" />
                         <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest transition">
-                            Subscribe
+                            {t('subscribe')}
                         </button>
                     </div>
                     <div className="mt-20 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
                         <div className="text-2xl font-black">EXPLORE<span className="text-orange-400">SOUTH</span></div>
                         <div className="flex gap-10 text-slate-400 font-bold text-sm uppercase tracking-widest">
-                            <span className="hover:text-white cursor-pointer transition">Home</span>
-                            <span className="hover:text-white cursor-pointer transition">About</span>
-                            <span className="hover:text-white cursor-pointer transition">Destinations</span>
-                            <span className="hover:text-white cursor-pointer transition">Contact</span>
+                            <span className="hover:text-white cursor-pointer transition">{t('home')}</span>
+                            <span className="hover:text-white cursor-pointer transition">{t('about')}</span>
+                            <span className="hover:text-white cursor-pointer transition">{t('destinations')}</span>
+                            <span className="hover:text-white cursor-pointer transition">{t('contact')}</span>
                         </div>
                     </div>
                     <p className="mt-12 text-slate-500 text-sm font-medium">

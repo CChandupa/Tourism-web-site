@@ -6,6 +6,7 @@ import AboutPage from './About_page';
 import DestinationPage from './Destinations_page';
 import PlaceDetailPage from './PlaceDetail_page_kataragama';
 import PlaceDetailPageSithulpawwa from './PlaceDetail_page_Sithulpawwa_temple';
+import PlaceDetailPageMadunagala from './PlaceDetail_page_Madunagala_Springs';
 
 function App() {
     const [lang, setLang] = useState('en');
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/Destinations_page" element={<DestinationPage lang={lang} setLang={setLang} />} />
                 <Route path="/PlaceDetail_page" element={<PlaceDetailPage lang={lang} setLang={setLang} />} />
                 <Route path="/PlaceDetail_page_Sithulpawwa" element={<PlaceDetailPageSithulpawwa lang={lang} setLang={setLang} />} />
+                <Route path="/PlaceDetail_page_Madunagala" element={<PlaceDetailPageMadunagala lang={lang} setLang={setLang} />} />
             </Routes>
         </Router>
     );

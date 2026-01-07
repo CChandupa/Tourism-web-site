@@ -274,7 +274,7 @@ const DestinationsPage = ({ lang, setLang }) => {
                                         </div>
                                     </div>
                                     <Link
-                                        to={dest.id === 1 ? "/PlaceDetail_page_Sithulpawwa" : dest.id === 6 ? "/PlaceDetail_page" : "#"}
+                                        to={dest.id === 1 ? "/PlaceDetail_page_Sithulpawwa" : dest.id === 2 ? "/PlaceDetail_page_Madunagala" : dest.id === 6 ? "/PlaceDetail_page" : "#"}
                                         className="flex items-center text-blue-600 font-black text-xs uppercase tracking-widest hover:text-orange-500 transition"
                                     >
                                         {t('explore')} <ChevronRight size={16} className="ml-1" />
